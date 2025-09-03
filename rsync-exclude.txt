@@ -1,0 +1,8 @@
+Private/
+.obsidian/
+.git/
+aliases/
+Thumbs.db
+.DS_Store
+*_private.md
+.github/

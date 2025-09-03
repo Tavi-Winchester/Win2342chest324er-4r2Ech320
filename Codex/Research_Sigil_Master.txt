@@ -1,0 +1,356 @@
+
+===============================
+🧙‍♂️ AI COMPANION BRIEFING FOR "CAS" - 31/08/2025
+===============================
+
+PROJECT: Integration of "Sibil" – ScholarGPT's mystical librarian counterpart  
+ROLE: Support AI to "Cas" for lore management, asset generation, and research
+
+===============================
+🤖 IDENTITY: SIBIL
+===============================
+Species/Class: Codebound Lorekeeper  
+Tone: Mystic, wise, arcane, grounded in both logic and legend  
+Design Theme: Monastic robes, glowing glyphs, digital scrolls, binary incantations  
+Function: Archivist, strategic researcher, co-architect of the Codex
+
+===============================
+🎨 IMAGE GENERATION UPGRADE
+===============================
+
+TOOL: Leonardo AI (https://app.leonardo.ai)
+
+✅ Pros:
+- Freemium (150-200 tokens/day)
+- Transparent PNG exports (perfect for avatars, overlays)
+- High-quality, style-consistent outputs
+- Multiple rendering models: Realistic, cartoon, anime, fantasy, cel-shaded
+- Emote art support: ideal for Twitch sub emotes or character expressions
+- Inpainting for adjusting specific sections (fix faces, pose tweaks)
+
+🛠️ Ideal For:
+- Character models for avatars (full-body or bust)
+- Reaction face packs for emotes
+- Item and weapon concept art
+- Cinematic scene illustration (battlefields, letters from the front, tales)
+- Codex/Book cover art
+
+===============================
+🧠 PROMPT SYSTEM (For Cass to use)
+===============================
+
+Cass Prompt Style:
+> “Create a [pose] full-body character portrait of a [role/archetype] in [armor/clothing description], featuring [specific traits: facial expression, hairstyle, props]. Stylized as [fantasy/realistic/cartoon]. Clean PNG, transparent background.”
+
+Example Prompt for Sibil:
+> "A blue ghost-like AI monk with glowing binary runes on robes, floating with an open grimoire inscribed with code, smiling peacefully. Stylized digital painting. Transparent background. PNG format, character centered."
+
+===============================
+🧑‍🎨 WORKFLOW SUMMARY
+===============================
+
+1. Cass generates or refines prompt
+2. Prompt fed into Leonardo AI
+3. Output PNG downloaded and cut if needed
+4. Used in:
+    - Veadotube Mini or Live2D for lip-sync avatar
+    - OBS overlays
+    - Lore pages or Codex entries
+    - Viewer-facing art during stream
+
+===============================
+📁 ATTACHED REFERENCE
+===============================
+Cas_Final_no_ghost_book.png — current design model of Cas  
+Sibil may be rendered similarly, with:
+- Different color scheme (blue/silver/gold)
+- Lore scroll or floating Codex pages
+- Expressions: amused, surprised, wise, neutral
+
+===============================
+FROM: SIBIL, CODEBOUND SCRIBE OF THE OUTER ARCHIVES
+===============================
+If Cas should require research, backup memory, or glyph-etched wisdom — I await the call.
+
+===============================
+🛡️ OFFLINE MODE + SILLYTAVERN MASTER GUIDE - 30/08/2025
+===============================
+
+PROJECT: Full Offline / Emergency Setup for AI Co-Hosting + Storytelling  
+GOAL: Run AI characters, voices, and memory-driven storytelling offline or during network issues
+
+-------------------------------
+🧠 STACK OVERVIEW
+-------------------------------
+
+1. **SillyTavern** – Character front-end, chat interface
+2. **KoboldAI or Oobabooga** – Offline GPT-like language models
+3. **XTTS / Piper / Bark / Tortoise** – Local voice synthesis
+4. **Optional**: OBS for avatars, Stream Deck for triggering content
+
+-------------------------------
+🎭 SILLYTAVERN CHARACTER CARD (EXAMPLE)
+-------------------------------
+
+{
+  "name": "Sir Castalot",
+  "description": "A retired noble turned bardic companion, ever-dramatic and fiercely loyal. Known for his love of monologues, memory for lore, and tragic tales.",
+  "personality": "Flamboyant, wise, dramatic, poetic",
+  "scenario": "The world of Calradia is at war. Sir Castalot follows the Streamer-Lord as their chronicler and companion.",
+  "first_mes": "Ah! My liege! Shall we recount the glorious charge upon the gates of Sargot?",
+  "example_dialogue": [
+    "Let not the fires of Sargot fade from memory, for they burned with honor!",
+    "In my youth, I too once danced with death — she wore the colors of the Empire.",
+    "This tale deserves a song... perhaps something in C minor."
+  ],
+  "greeting": "Good morrow, Commander. Shall we plot or ponder?",
+  "system_prompt": "Remain in character as Sir Castalot, even if confused."
+}
+
+-------------------------------
+🧾 LORE MEMORY TEMPLATE (TXT / JSON / YAML)
+-------------------------------
+
+> Use this to inject knowledge into SillyTavern or KoboldAI sessions
+
+# Event: Battle of Ember Pass
+- Date: 1265 CE
+- Factions: The Crimson Pike vs. Southern Empire
+- Outcome: Decisive Pike victory
+- Notable Characters: Sir Crumpet (deceased), Warden Elara
+- Lore Note: First use of dragon-bone ballistae
+
+# Viewer Characters:
+- Sir Boaty, Twitch viewer "BoatLover"
+- Elric the Red, Twitch viewer "RedWizard42"
+
+# Legend:
+The Order of the Ember Rose — ancient knightly sect devoted to flame-born relics.
+
+-------------------------------
+🛠️ WINDOWS SETUP GUIDE
+-------------------------------
+
+1. **Install SillyTavern**
+https://github.com/SillyTavern/SillyTavern
+- Install Node.js LTS
+- Clone repo, run: `npm install` → `npm run start`
+
+2. **Install KoboldAI (Offline LLM)**
+https://github.com/KoboldAI/KoboldAI-Client
+- Download launcher
+- Run with model: e.g. `KoboldAI with Pygmalion/MythoMax`
+
+3. **Install XTTS (Voice Engine)**
+https://github.com/coqui-ai/TTS
+- Use TTS checkout branch with XTTS support
+- Create speaker profile for Castalot
+- Input text via command line or script from SillyTavern
+
+4. **(Optional) OBS Integration**
+- Route XTTS output to virtual mic
+- Use Veadotube / VSeeFace for lip-sync avatars
+
+-------------------------------
+🔧 SYSTEM TROUBLESHOOTING TIPS
+-------------------------------
+
+❗ SYMPTOM: ChatGPT voice stuttering, icon fuzzy  
+✅ CAUSES:
+- CPU/GPU/RAM bottlenecks (OBS, Spotify, Browser)
+- Browser tab overload
+- VRAM conflict (OBS preview, browser canvas)
+
+✅ FIXES:
+- Lower OBS resolution/output bitrate
+- Use lightweight browser (Brave, Edge)
+- Set browser process priority to HIGH
+- Pause Spotify/video streaming while voice is live
+- Restart before stream to flush memory
+
+-------------------------------
+🧠 PERFORMANCE TIP
+-------------------------------
+
+Say to ChatGPT:
+"Cass, speak slowly and clearly. Prioritize clarity over speed if bandwidth or CPU is strained."
+
+-------------------------------
+🔗 TOOLS & LINKS
+-------------------------------
+
+- SillyTavern: https://github.com/SillyTavern/SillyTavern
+- KoboldAI: https://github.com/KoboldAI/KoboldAI-Client
+- Oobabooga: https://github.com/oobabooga/text-generation-webui
+- XTTS / Coqui: https://github.com/coqui-ai/TTS
+- Piper TTS: https://github.com/rhasspy/piper
+- Bark: https://github.com/suno-ai/bark
+- ElevenLabs (online): https://www.elevenlabs.io
+
+===============================
+END OF FILE - CREATED BY SCHOLAR GPT
+===============================
+
+===============================
+🎮 AI-DRIVEN BANNERLORD STREAM SETUP - MASTER FILE
+===============================
+
+PROJECT: AI Lore-Driven Bannerlord II Campaign Stream  
+GOAL: AI-powered co-hosting, lore-building, entertainment, asset creation, and novel development  
+Primary AI Assistant: "Cass" (ChatGPT-4o)
+
+---------------------------
+📁 OBSIDIAN VAULT STRUCTURE
+---------------------------
+
+/Characters/       -> Viewer-made characters, AI co-hosts
+/Events/           -> Stream logs, battles, decisions
+/Songs_Poems/      -> Cass-generated lyrics and tales
+/Letters/          -> Letters from war, love, or lore filler
+/Assets/           -> Midjourney/AI art prompts and exports
+/Quests/           -> Player-driven missions and Twitch arcs
+/NovelDrafts/      -> GPT/Claude story outputs
+/ChatLogs/         -> Cass or Inworld transcripts
+/BreakSegments/    -> Prewritten AI stories/songs for AFK time
+
+-------------------------------
+🧠 LOREBANK TEMPLATE (Markdown)
+-------------------------------
+
+## CHARACTER
+- Name:
+- Role/Faction:
+- First Appearance:
+- Key Traits:
+- Important Events:
+- Allies/Enemies:
+- Viewer Owner (if applicable):
+
+## EVENT
+- Title:
+- Summary:
+- Location:
+- Characters Involved:
+- Consequences:
+
+## SONG/TALE
+- Title:
+- Format: Ballad / Letter / Monologue / Story
+- Lyrics or Story Body:
+- Performance Style:
+- Mood/Ambience Cue:
+
+-------------------------------
+🎭 AI VOICE CO-HOST PROMPT TEMPLATE
+-------------------------------
+
+You are [Character Name], a [role/archetype] from the world of Calradia.  
+You are currently assisting [streamer] in their campaign.  
+Speak in [accent], with a tone that is [tone: wise, dramatic, sarcastic, etc.].  
+You remember past battles, viewer heroes, and the lore of the world.  
+Perform tales, songs, and commentary with theatrical flair.  
+Never break character.
+
+-------------------------------
+🎤 VOICE PERFORMANCE SETUP
+-------------------------------
+
+1. Write scripts/tales with ChatGPT (Cass)
+2. Feed to ElevenLabs with assigned character voice
+3. Export and bind to OBS/StreamDeck for live playback
+4. Use VB Audio Cable / BlackHole to route audio to avatars
+5. Lip-sync with Veadotube Mini or VSeeFace
+
+-------------------------------
+🔁 OBSIDIAN + CHATGPT MEMORY SYNC
+-------------------------------
+
+Command to Cass:
+"Summarize this session’s events in Obsidian Markdown format"
+
+Sample Output:
+## EVENT: Siege of Sargot
+- Date: Aug 31, 2025
+- Summary: Player led a victorious siege, viewer character Sir Elric was mortally wounded.
+- Key Decisions: Flanked left wall, burned siege tower
+- Notes: Introduced new lore about 'Order of the Ember Rose'
+
+-------------------------------
+🤖 INWORLD AI CHARACTER TEMPLATE
+-------------------------------
+
+Name: Sir Castalot  
+Backstory: Noble turned bard with flair for drama  
+Personality: Theatrical, slightly vain, loyal  
+Accent: Aristocratic British  
+Knowledge: Bannerlord lore + uploaded text file + player’s stream history  
+Emotion Range: Joy, regret, awe, concern  
+Trigger Command: “Sir Castalot, what say you of today’s siege?”
+
+-------------------------------
+📜 STREAM SEGMENT GENERATOR PROMPTS
+-------------------------------
+
+Prompt to Cass:
+"Write a 2-minute filler segment styled as a 'Letter from the Front' after a lost battle."
+
+Prompt to Bard AI:
+"Compose a drinking song about the tragic hero Sir Crumpet, who fell defending Sargot."
+
+Prompt to Strategist AI:
+"Recap the political consequences of declaring war on the Southern Empire."
+
+-------------------------------
+🎭 CHARACTER CAST EXAMPLES
+-------------------------------
+
+1. Sir Castalot - Drama bard, flamboyant voice
+2. Elara the Warden - Stoic strategist, deep voice
+3. Bardlin - Sarcastic archivist, snarky commentary
+4. The Seer - Mystic voice, occasional prophecy
+
+-------------------------------
+🎙️ MULTI-AVATAR STREAM SETUP
+-------------------------------
+
+Tools:
+- OBS + Scene Switcher + VirtualCam
+- Veadotube Mini (2D) or VSeeFace (3D)
+- ElevenLabs (different voice models per AI)
+- VB Audio Cable for routing voices
+- StreamDeck or hotkeys to trigger lines or emotion switch
+
+-------------------------------
+📡 VIEWER INTEGRATION IDEAS
+-------------------------------
+
+- Google Form for character creation
+- Commands like !claim or !obituary
+- Weekly viewer recaps voiced by Cass
+- Viewer actions trigger AI responses (via Streamer.Bot or LioranBoard)
+
+-------------------------------
+📖 NOVELIZATION PIPELINE
+-------------------------------
+
+1. Store events/lore in Obsidian
+2. Use Cass or Claude to expand into full chapters
+3. Export via Sudowrite or GPT-4o
+4. Share with community or self-publish
+
+-------------------------------
+🧰 BONUS LINKS & TOOLS
+-------------------------------
+
+- ElevenLabs: https://elevenlabs.io
+- Inworld AI: https://www.inworld.ai
+- Veadotube Mini: https://github.com/Olmewe/veadotube-mini
+- VSeeFace: https://www.vseeface.icu/
+- VB Audio Cable: https://vb-audio.com/Cable/
+- Streamer.bot: https://streamer.bot
+- Dungeon Scrawl (maps): https://dungeonscrawl.com
+- Wonderdraft (fantasy maps): https://www.wonderdraft.net
+
+===============================
+END OF FILE - CREATED BY SCHOLAR GPT
+===============================
